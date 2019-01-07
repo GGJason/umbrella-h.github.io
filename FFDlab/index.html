@@ -150,6 +150,8 @@ div.rightFace {
 <!--上面這個滑桿-->
 <button type="button" id="bre" onclick='document.getElementById("indicate").style.opacity = "0"' class="button1" style="position: absolute; top: 600px; left: 700px; opacity: 0;">Click to Reset</button>
 <button type="button" id="bstart"  class="button" style="position: absolute; top: 725px; left: 990px">Start</button>
+<!--<button type="button" id="bend"  class="button" style="position: absolute; top: 725px; left: 990px">End</button>
+-->
 <!--Rearrange faces Randomly-->
 
 <script>
@@ -229,12 +231,9 @@ function change(){
       document.getElementById("rf").src = "images/cover/" +r+ ".png";
       console.log(l);
       console.log(r);
-      count++;
-    }else{
-      document.getElementById("bre").style.opacity = "1";
-      document.getElementById("bstart").style.opacity = "0";
+      if(++count == 9)
+        count = 0;
 
-      console.log(count);
     }
 }
 
